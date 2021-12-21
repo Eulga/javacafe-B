@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url(http://www.google.com/fonts/earlyaccess);
+
+
+* {
+    margin: 0; padding: 0;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+/* main */
+header {
+    width: 100%; height: 100px;
+}
+#cafeTitle {
+    width: 100%; height: 100px;
+}
+#cafeTitle h1 {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: #9C6C39;
+    text-transform: uppercase;
+}
+/* main */
+
+#change_image {
+    width: 100%;
+    text-align: center;
+}
+#scroll_wrap {
+    width: 100%; height: 50vh;
+    margin: 0 auto 30px;
+    overflow: scroll;
+    border: 3px solid #9C6C39;
+}
+#ch_wrap {
+    width: 70%; height: 70vh;
+    margin: 0 auto;
+    padding: 100px;
+    border: 5px solid #9C6C39;
+}
+#ch_wrap h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #d69d60;
+}
+form div {
+    width: 20%; height: 270px;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-align: center; 
+}
+button {
+    width: 30%; height: 40px;
+    border: 2px solid #d69d60;
+    background-color: #9C6C39;
+    margin: 30px 20px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 20px;
+}
+#imagebox {
+    width: 20%; height: 240px;
+}
+#radiobox {
+    margin-left: 15%;
+    padding-top: 80%;
+}

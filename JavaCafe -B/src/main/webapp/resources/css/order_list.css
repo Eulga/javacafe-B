@@ -1,0 +1,128 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; 
+    font-family: 'Jeju Gothic', sans-serif;}
+a {
+    text-decoration: none   ;
+}
+.hidden {
+    display: none;
+}
+
+header {
+    width: 100%; height: 100px;
+}
+#cafeTitle {
+    width: 100%; height: 100px;
+}
+#cafeTitle h1 {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: #9C6C39;
+    text-transform: uppercase;
+}
+/* main */
+
+#container {
+    width: 100%; height: 70vh;
+}
+
+#list_wrap {
+    width: 70%; height: 60vh;
+    margin: 0 auto;
+    padding: 100px;
+    border: 5px solid #9C6C39;
+    text-align: center;
+}
+#list_wrap h2 {
+    font-size: 40px;
+    color: #9C6C39;
+    margin-bottom: 20px; 
+}
+#order_list {
+    width: 70%; height: 15vh;
+    margin: 0 auto 30px;
+    padding: 30px;
+    border: 3px solid #9C6C39;
+    overflow: scroll;
+}
+#order_list .input_box {
+    border: 1px solid #d69d60;
+}
+.change_quantity_button {
+    background-color: #9C6C39;
+    padding: 3px;
+    color: #fff;
+    border: 1px solid #d69d60;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto 10px;
+    border-bottom: 3px solid #9C6C39;
+}
+
+th {
+    width: 33%; height: 30px;
+    border-top: 3px solid #9C6C39;
+    border-bottom: 1px solid #9C6C39;
+}
+td {
+    height: 40px;
+    border-bottom: 1px solid #9C6C39;
+}
+
+#list_wrap .delete_button {
+    display: inline-block;
+    width: 200px; height: 20px;
+    color: #fff;
+    background-color: #9C6C39;
+    border: 1px solid #d69d60;
+    border-radius: 10px;
+}
+
+#button_box {
+    width: 50%;
+    margin: 0 auto 30px;
+}
+#button_box .add_order {
+    display: inline-block;
+    width: 80%; height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #9C6C39;
+    border: 1px solid #d69d60;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+#button_box .home {
+    display: inline-block;
+    width: 40%; height: 25px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #9C6C39;
+    border: 1px solid #d69d60;
+    border-radius: 12.5px;
+}
+
+button {
+    width: 40%; height: 30px;
+    color: #fff;
+    background-color: #9C6C39;
+    border: 1px solid #d69d60;
+    border-radius: 15px;
+}
+
+.customerNumber {
+    border: 1px solid #9C6C39;
+}
+
+.payment {
+    width: 20%; height: 30px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #9C6C39;
+    border: 1px solid #d69d60;
+    border-radius: 15px;
+}

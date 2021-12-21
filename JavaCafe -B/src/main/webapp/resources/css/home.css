@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import url(http://www.google.com/fonts/earlyaccess);
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+/* 전체 레이아웃 플렉스 */
+#home_wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.home_item1 {
+    width: 70%;
+    height: 100vh;
+    border: 1px solid #000;
+}
+
+.home_item2 {
+    width: 30%;
+    height: 100vh;
+    border: 1px solid #000;
+    background-color: bisque;
+}
+
+/* 근무자 숙지사항 */
+.notice_wrap {
+    margin: 59px 0 0 50px;
+}
+.notice_wrap > h2 {
+    font-family: 'Single Day', cursive;
+    font-size: 48px;
+}
+.notice_wrap > ul {
+    margin: 0 auto;
+}
+.notice_wrap > ul > li {
+    font-family: 'Single Day', cursive;
+    font-size: 40px;
+    text-decoration: underline;
+    margin: 10px auto;
+}
+
+
+/* 화면 우측 리스트 설정 */
+.home_item2 > ul {
+    margin-top: 35%;
+}
+.home_item2 > ul > li {
+    height: 10%;
+    line-height: 10vh;
+    margin: 30px 20px;
+    text-align: center;
+    border: 3px solid #2DB400;
+    border-radius: 15px;
+    font-size: 25px;
+    list-style: none;
+}
+.home_item2 > ul > li:hover {
+    border: 3px solid tomato;
+}
+.home_item2 > ul > li > a {
+    color: #000;
+    display: block;
+    width: 100%;
+}
