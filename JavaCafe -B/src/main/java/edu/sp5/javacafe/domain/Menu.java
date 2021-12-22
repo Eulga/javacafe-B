@@ -1,5 +1,10 @@
 package edu.sp5.javacafe.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Menu {
 	private long itemNumber;
 	private String itemName;
@@ -13,14 +18,14 @@ public class Menu {
 		
 	}
 	
-	//ÁÖ¹®¿ë
+	//ï¿½Ö¹ï¿½ï¿½ï¿½
 	public Menu(String itemName, double itemPrice) {
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 	}
 	
 	
-	//¸Þ´ºµî·Ï¿ë
+	//ï¿½Þ´ï¿½ï¿½ï¿½Ï¿ï¿½
 	public Menu(long itemNumber, String itemName, String itemCategory, double itemPrice, String itemImage, String salesSeason) {
 		super();
 		this.itemNumber = itemNumber;
@@ -31,7 +36,7 @@ public class Menu {
 		this.salesSeason = salesSeason;
 	}
 
-	//¸ðµçÁ¤º¸
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Menu(long itemNumber, String itemName, String itemCategory, double itemPrice, String itemImage,
 			String salesSeason, long itemStock) {
 		super();
@@ -41,50 +46,6 @@ public class Menu {
 		this.itemPrice = itemPrice;
 		this.itemImage = itemImage;
 		this.salesSeason = salesSeason;
-		this.itemStock = itemStock;
-	}
-
-	public long getItemNumber() {
-		return itemNumber;
-	}
-
-	public void setItemNumber(long itemNumber) {
-		this.itemNumber = itemNumber;
-	}
-	public String getItemName() {
-		return itemName;
-	}
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
-	}
-	public String getItemCategory() {
-		return itemCategory;
-	}
-	public void setItemCategory(String itemCategory) {
-		this.itemCategory = itemCategory;
-	}
-	public double getItemPrice() {
-		return itemPrice;
-	}
-	public void setItemPrice(double itemPrice) {
-		this.itemPrice = itemPrice;
-	}
-	public String getItemImage() {
-		return itemImage;
-	}
-	public void setItemImage(String itemImage) {
-		this.itemImage = itemImage;
-	}
-	public String getSalesSeason() {
-		return salesSeason;
-	}
-	public void setSalesSeason(String salesSeason) {
-		this.salesSeason = salesSeason;
-	}
-	public long getItemStock() {
-		return itemStock;
-	}
-	public void setItemStock(long itemStock) {
 		this.itemStock = itemStock;
 	}
 
