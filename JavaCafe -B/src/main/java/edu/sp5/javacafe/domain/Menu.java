@@ -2,9 +2,11 @@ package edu.sp5.javacafe.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class Menu {
 	private long itemNumber;
 	private String itemName;
@@ -48,13 +50,5 @@ public class Menu {
 		this.salesSeason = salesSeason;
 		this.itemStock = itemStock;
 	}
-
-	@Override
-	public String toString() {
-		return "Menu [itemNumber=" + itemNumber + ", itemName=" + itemName + ", itemCategory=" + itemCategory
-				+ ", itemPrice=" + itemPrice + ", itemImage=" + itemImage + ", salesSeason=" + salesSeason
-				+ ", itemStock=" + itemStock + "]";
-	}
-	
 	
 }
