@@ -20,7 +20,7 @@
                     <li>마감 정산 후 시재금액과 맞는지 확인</li>
                     <li>마감 근무자는 퇴근전 뒷정리 깨끗이 하기</li>
                 </ul>            
-            </div>			
+            </div>
         </div>
 		<div class="home_item2">
 			<ul>

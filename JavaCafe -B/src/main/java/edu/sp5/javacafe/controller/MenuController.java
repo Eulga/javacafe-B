@@ -59,7 +59,7 @@ public class MenuController {
 	@PostMapping("/addMenu")
 	public String addMenu(@RequestParam("itemImage") String itemImage, HttpServletRequest req) {
 		HttpSession session = req.getSession();
-		Menu menu = (Menu)session.getAttribute("menu");
+		Menu menu = (Menu) session.getAttribute("menu");
 		menu.setItemImage(itemImage);
 		menuService.addMenu(menu);
 		session.removeAttribute("menu");

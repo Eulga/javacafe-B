@@ -20,8 +20,9 @@
                 <button>cake</button>
                 <c:forEach var="menu" items="${menuList }">
                 <c:choose>
+                
                         <c:when test="${menu.itemCategory eq 'Drink' }">
-                            <form action="addOrder" method="post" id="drink">
+                            <form action="addOrder" method="post" class="drink">
                                 <div>
                                 	<img src="${menu.itemImage }" height="200">
                                 </div>  
@@ -32,7 +33,7 @@
                             </form>
                         </c:when>
                         <c:otherwise>
-                            <form action="addOrder" method="post" id="cake">
+                            <form action="addOrder" method="post" class="cake">
                                 <div>
                                		<img src="${menu.itemImage }">
                                 </div>

@@ -58,9 +58,8 @@ public class OrderController {
 	}
 	
 	@PostMapping("/addOrder")
-	public ModelAndView addOrder(HttpSession session, @ModelAttribute Menu menu) {
+	public ModelAndView addOrder(@SessionAttribute("orderList") List<Order> orderList, @ModelAttribute Menu menu, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
-		List<Order> orderList = (List<Order>) session.getAttribute("orderList");
 		if(orderList == null) {
 			orderList = new ArrayList<Order>();
 			orderList.add(new Order(menu, 1));
