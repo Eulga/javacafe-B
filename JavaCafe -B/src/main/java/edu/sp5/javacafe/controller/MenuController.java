@@ -21,7 +21,7 @@ import edu.sp5.javacafe.service.MenuService;
 public class MenuController {
 	
 	@Autowired
-	public MenuService menuService;
+	private MenuService menuService;
 	
 	@GetMapping("/menuList")
 	public ModelAndView menu() {
@@ -41,13 +41,13 @@ public class MenuController {
 		mav.setViewName("/menu_management");
 		return mav;
 	}
-	//¸Þ´ºÃß°¡È­¸éÀÌµ¿
+	//ï¿½Þ´ï¿½ï¿½ß°ï¿½È­ï¿½ï¿½ï¿½Ìµï¿½
 	@GetMapping("/addMenu")
 	public String addMenu() {
 		return "/addmenu";
 	}
 	
-	//ÀÌ¹ÌÁö ÀÔ·Â
+	//ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 	@PostMapping("/choiceImage")
 	public String choiceItemImage(HttpServletRequest req, @ModelAttribute Menu menu) {
 		HttpSession session = req.getSession();
@@ -55,7 +55,7 @@ public class MenuController {
 		return "/select_menuImage";
 	}
 	
-	//ÃÖÁ¾ ¸Þ´ºÃß°¡
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ß°ï¿½
 	@PostMapping("/addMenu")
 	public String addMenu(@RequestParam("itemImage") String itemImage, HttpServletRequest req) {
 		HttpSession session = req.getSession();
@@ -66,7 +66,7 @@ public class MenuController {
 		return "redirect:/menuManagement";
 	}
 	
-	//¸Þ´ºÁ¤º¸ ¼öÁ¤
+	//ï¿½Þ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@GetMapping("/changeMenuInfo")
 	public ModelAndView changeMenuInfo(HttpServletRequest req, @RequestParam("itemNumber") long itemNumber) {
 		Menu menu = menuService.findMenuByItemNumber(itemNumber);
@@ -75,7 +75,7 @@ public class MenuController {
 		mav.setViewName("/change_menu_info");
 		return mav;
 	}
-	//ÀÌ¹ÌÁö ¼öÁ¤
+	//ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@PostMapping("/changeMenuImage")
 	public String changeMenuImage(HttpServletRequest req, @ModelAttribute Menu menu) {
 		HttpSession session = req.getSession();
@@ -83,7 +83,7 @@ public class MenuController {
 		return "/change_menu_image";
 	}
 	
-	//ÃÖÁ¾ ¼öÁ¤È®ÀÎ
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½
 	@PostMapping("/changeMenuInfo")
 	public String changeMenuInfo(@RequestParam("itemImage") String itemImage, HttpServletRequest req) {
 		HttpSession session = req.getSession();
@@ -101,7 +101,7 @@ public class MenuController {
 	}
 	
 	/**
-	 * stock °ü¸®
+	 * stock ï¿½ï¿½ï¿½ï¿½
 	 */
 	
 	@GetMapping("/stockManagement")

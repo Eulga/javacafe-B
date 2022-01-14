@@ -19,7 +19,7 @@ public class DataSourceConfig {
 		
 		ds.setInitialSize(2);
 		ds.setMaxActive(10);	//default 100
-		ds.setMaxIdle(10);		//idle ¹Ì ±âÀÔ½Ã °æ°íµüÁö ºÙÀ½ idle ÀÌ maxActiveº¸´Ù Å¬¼ö´Â ¾ø±â ¶§¹®
+		ds.setMaxIdle(10);		//idle ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ idle ï¿½ï¿½ maxActiveï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		return ds;
 	}
 	
@@ -27,6 +27,5 @@ public class DataSourceConfig {
 	public JdbcTemplate jdbcTemplate() {
 		return new JdbcTemplate(dataSource());
 	}
-	
 	
 }

@@ -14,15 +14,15 @@ import edu.sp5.javacafe.dao.rowmapper.OrderRowMapper;
 import edu.sp5.javacafe.domain.Order;
 
 /**	
- * oid				°íÀ¯¹øÈ£
- * receiptNumber	¿µ¼öÁõ¹øÈ£
- * orderNumber		ÁÖ¹®¹øÈ£
- * menu				»óÇ°¸í, °¡°Ý
- * orderQuantity	ÁÖ¹®·®
- * customer			±¸¸ÅÀÚ¹øÈ£(0 ÀÏ½Ã ºñÈ¸¿øÁÖ¹®)
- * orderDate		ÁÖ¹®³¯Â¥
- * paymentMethod	°áÁ¦¹æ½Ä(Çö±Ý, Ä«µå?½Å¿ë?)
- * status			ÃÖÁ¾ÁÖ¹®»óÅÂ(°áÁ¦¿Ï·á, È¯ºÒ µî)
+ * oid				ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£
+ * receiptNumber	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£
+ * orderNumber		ï¿½Ö¹ï¿½ï¿½ï¿½È£
+ * menu				ï¿½ï¿½Ç°ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½
+ * orderQuantity	ï¿½Ö¹ï¿½ï¿½ï¿½
+ * customer			ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½È£(0 ï¿½Ï½ï¿½ ï¿½ï¿½È¸ï¿½ï¿½ï¿½Ö¹ï¿½)
+ * orderDate		ï¿½Ö¹ï¿½ï¿½ï¿½Â¥
+ * paymentMethod	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½, Ä«ï¿½ï¿½?ï¿½Å¿ï¿½?)
+ * status			ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½, È¯ï¿½ï¿½ ï¿½ï¿½)
  * @author kimjaeik
  *
  */
@@ -51,7 +51,7 @@ public class OrderDaoDerby implements OrderDao {
 
 	@Override
 	public List<Order> findOrderByReceiptNumber(long receiptNumber) {
-		String sql = "SELECET * FROM ORDERLIST WHERE receiptNumber = ?";
+		String sql = "SELECT * FROM ORDERLIST WHERE receiptNumber = ?";
 		return jdbcTemplate.query(sql, new OrderRowMapper(), receiptNumber);
 	}
 	
