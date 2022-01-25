@@ -6,8 +6,10 @@ CREATE TABLE CafeMaster (
 
 INSERT INTO CafeMaster (masterNumber, passwd, phoneNumber) VALUES ('3416341352', '1111', '0');
 
+select * from cafemaster;
+
 CREATE TABLE Customer (
-   cid				BIGINT        NOT NULL	PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+   cid				BIGINT        NOT NULL	PRIMARY KEY AUTO_INCREMENT,
    customerNumber	VARCHAR(13)   NOT NULL,
    mileage			BIGINT        NOT NULL	DEFAULT 0
 );
@@ -24,7 +26,7 @@ CREATE TABLE MenuItem (
 );
 
 CREATE TABLE Stock (
-	sid				BIGINT			PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	sid				BIGINT			PRIMARY KEY AUTO_INCREMENT,
 	itemNumber		BIGINT			NOT NULL,
 	itemStock		BIGINT			NOT NULL,
 	
@@ -32,7 +34,7 @@ CREATE TABLE Stock (
 );
 
 CREATE TABLE OrderList (
-	oid				BIGINT			PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	oid				BIGINT			PRIMARY KEY AUTO_INCREMENT,
 	receiptNumber	BIGINT			NOT NULL,
 	orderNumber		BIGINT			NOT NULL,
 	itemName		VARCHAR(20)		NOT NULL,
@@ -41,7 +43,7 @@ CREATE TABLE OrderList (
 	customerNumber	VARCHAR(13)		NOT NULL,
 	orderDate		TIMESTAMP		NOT NULL	DEFAULT CURRENT_TIMESTAMP,
 	paymentMethod	VARCHAR(4)		NOT NULL,
-	status			VARCHAR(10)		NOT NULL	DEFAULT '°áÁ¦¿Ï·á'
+	status			VARCHAR(10)		NOT NULL	DEFAULT 'ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½'
 );
 
 

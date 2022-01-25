@@ -50,7 +50,6 @@ public class OrderController {
 	@GetMapping("/addOrder")
 	public ModelAndView addOrder(@SessionAttribute("orderList") List<Order> orderList) {
 		ModelAndView mav = new ModelAndView();
-		
 		mav.addObject("orderList", orderList);
 		mav.setViewName("order_list");
 		
@@ -58,8 +57,9 @@ public class OrderController {
 	}
 	
 	@PostMapping("/addOrder")
-	public ModelAndView addOrder(@SessionAttribute("orderList") List<Order> orderList, @ModelAttribute Menu menu, HttpSession session) {
+	public ModelAndView addOrder(HttpSession session, @ModelAttribute Menu menu) {
 		ModelAndView mav = new ModelAndView();
+		List<Order> orderList = (List<Order>) session.getAttribute("orderList");
 		if(orderList == null) {
 			orderList = new ArrayList<Order>();
 			orderList.add(new Order(menu, 1));

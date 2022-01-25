@@ -37,10 +37,8 @@ public class OrderDaoDerby implements OrderDao {
 		String sql = "INSERT INTO ORDERLIST("
 				+ "receiptNumber, orderNumber, itemName, itemprice, orderQuantity, customerNumber, paymentMethod, status)"
 				+ " VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-		Object[] args = new Object[] {order.getReceiptNumber(), order.getOrderNumber(), order.getMenu().getItemName(), order.getMenu().getItemPrice(),
-				order.getOrderQuantity(), order.getCustomer().getCustomerNumber(), order.getPaymentMethod(), order.getStatus()};
-		int[] types = new int[] {BIGINT, BIGINT, VARCHAR, DOUBLE, BIGINT, VARCHAR, VARCHAR, VARCHAR};
-		jdbcTemplate.update(sql, args, types);
+		jdbcTemplate.update(sql, order.getReceiptNumber(), order.getOrderNumber(), order.getMenu().getItemName(), order.getMenu().getItemPrice(),
+				order.getOrderQuantity(), order.getCustomer().getCustomerNumber(), order.getPaymentMethod(), order.getStatus());
 	}
 	
 	@Override

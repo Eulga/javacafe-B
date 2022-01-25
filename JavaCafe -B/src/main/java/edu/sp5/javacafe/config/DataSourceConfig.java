@@ -12,10 +12,10 @@ public class DataSourceConfig {
 	@Bean
 	public DataSource dataSource() {
 		DataSource ds = new DataSource();
-		ds.setDriverClassName("org.apache.derby.jdbc.ClientDriver");
-		ds.setUrl("jdbc:derby://localhost:1527/javacafe");
-		ds.setUsername("javacafe");
-		ds.setPassword("javacafe");
+		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		ds.setUrl("jdbc:mysql://localhost:3306/javacafe");
+		ds.setUsername("root");
+		ds.setPassword("adminadmin");
 		
 		ds.setInitialSize(2);
 		ds.setMaxActive(10);	//default 100
